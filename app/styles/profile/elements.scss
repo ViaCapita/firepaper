@@ -1,0 +1,1255 @@
+/**
+ * Name: elements.css
+ * Version: 1.0.0
+ *	
+ *	-
+ *
+ *	T.O.C
+ *	
+ *	#Accordions
+ *  #Alerts
+ *  #Back to top
+ *	#Buttons
+ *	#Callout Boxes
+ *	#Custom Lists
+ *	#Dividers
+ *	#Google Maps
+ *	#Icon Boxes
+ *	#Milestones
+ *	#Parallax
+ *	#Pie charts
+ *	#Pricing Tables
+ *	#ProgressBars
+ *	#SocialMedia
+ *	#Styled Tables
+ *	#Tabs
+ *	#Testimonials
+ */
+
+/* ==========================================================================
+   #Accordions
+   ========================================================================== */
+
+	/* Accordeon */
+	
+	.accordion { margin-bottom: 30px; }
+
+	.accordion-item { margin-bottom: 10px; }
+
+	.accordion-item-toggle {
+		position: relative;
+		display: block;
+		padding: 15px 20px;
+		background-color: #b1b1b1;
+		color: #fff;
+	}
+	
+	.accordion-item-toggle:after {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 18px;
+		content: "+";
+	}
+	
+	.accordion-item-toggle.active:after { content: "-"; }
+	
+	.accordion-item-toggle:hover,
+	.accordion-item-toggle.active {
+		background-color: #de4e43;
+		text-decoration: none;
+	}
+	
+	.accordion-item-content { 
+		padding: 15px 20px; 
+		display: none; 
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.accordion-item-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	
+	/* Toogle */
+	
+	.toggle { margin-bottom: 30px; }
+	
+	.toggle-item { margin-bottom: 10px; }
+	
+	.toggle-item-toggle {
+		position: relative;
+		display:block;
+		padding: 15px 20px;
+		background-color: #b1b1b1;
+		color: #fff;
+	}
+	
+	.toggle-item-toggle:after {
+		position: absolute;
+		top: 15px;
+		right: 15px;
+		font-size: 18px;
+		content: "+";
+	}
+	
+	.toggle-item-toggle.active:after { content: "-"; }
+	
+	.toggle-item-toggle:hover,
+	.toggle-item-toggle.active {
+		background-color: #de4e43;
+		text-decoration: none; 
+	}
+
+	.toggle-item-content { 
+		padding: 15px 20px; 
+		display: none; 
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.toggle-item-content:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+
+	@media (max-width: 767px) {
+	
+		
+	  
+	}
+
+/* ==========================================================================
+   #Alerts
+   ========================================================================== */
+
+	.alert {
+		padding: 13px 15px;
+		border: 1px solid #d1d1d1;
+		border-radius: 3px;
+		-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+		        box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+		margin-bottom: 30px;
+		background-color: #f8f8f8;
+		font-size: 13px;
+	}
+	
+	.alert i {
+		position: relative;
+		top: 1px;
+		margin-right: 7px;
+		font-size: 16px;
+	}
+	
+	.alert.info {
+		border: 1px solid #86cde3;
+		background-color: #cce9f2;
+		color: #3194b1;
+	}
+	
+	.alert.success {
+		border: 1px solid #b3cda1;
+		background-color: #d8f1c6;
+		color: #749958;
+	}
+	
+	.alert.error {
+		border: 1px solid #e1a1a1;
+		background-color: #f9d9d9;
+		color: #b55454;
+	}
+	
+	.alert.warning {
+		border: 1px solid #d1c9ae;
+		background-color: #fbf4dd;
+		color: #978c68;
+	} 
+
+/* ==========================================================================
+   #Back to top
+   ========================================================================== */
+
+	#back-to-top {
+		position: fixed;
+		right: -65px;
+		bottom: 140px;
+		width: 50px;
+		height: 50px;
+		background-color: #747474;
+		color: #fafafa;
+		font-size: 30px;
+		line-height: 40px;			
+		text-align: center;
+		opacity: 0.5;
+		cursor: pointer;
+		-webkit-border-radius: 2px;
+		        border-radius: 2px;
+		text-decoration: none;
+		-webkit-transition: all 0.4s ease 0s;
+			 -o-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+		z-index: 80;		
+	}
+	
+	#back-to-top i {
+		font-size: 24px;
+		line-height: 50px;
+		font-weight: normal;
+		vertical-align: top;
+		-webkit-transition: all 0.4s ease 0s;
+			 -o-transition: all 0.4s ease 0s;
+				transition: all 0.4s ease 0s;
+	}
+	
+	#back-to-top:hover {
+		background-color: rgba(0, 0, 0, 0.7);
+	}
+	
+	#back-to-top:hover i {
+		color: #fff;
+	}
+	
+	#back-to-top.visible {
+		right: 30px;
+	}
+	
+	#back-to-top.gone {
+		right: -65px;
+	}
+
+/* ==========================================================================
+   #Buttons
+   ========================================================================== */
+
+	.btn { 
+		display: inline-block; 
+		padding: 6px 12px; 
+		border: 1px solid #ccc;
+		border-radius: 3px;
+		margin: 0 5px 20px 0;
+		background-color: #fff;
+		color: #444;
+		line-height: 18px; 
+		text-decoration: none !important;
+		cursor: pointer; 	
+	}
+	
+	.btn:focus { outline: none; }
+	
+	.btn-large {
+		padding: 12px 24px;
+		font-size: 13px;
+	}
+	
+	.btn i,
+	.btn-large i { 
+		float: left; 
+		margin: 2px 8px 0 -4px;
+		font-size: 14px; 
+		line-height: 14px; 
+	}
+	
+	.btn:hover { background: #f9f9f9; }
+
+	/* Buton Colors */
+	
+	.btn-white {
+		border: 1px solid #dddddd;
+		background-color: #f7f7f7;
+		color: #444;
+	}
+	
+	a.btn-white { color: #444; }
+	.btn-white:hover { background: #fbfbfb; }
+	
+	.btn-black {
+		border: 1px solid #464646;
+		background-color: #464646;
+		color: #fff;
+	}
+	
+	a.btn-black { color: #fff; }
+	.btn-black:hover { background: #535353; }
+	
+	.btn-blue {
+		border: 1px solid #1f70ad;
+		background-color: #2778c8;
+		color: #fff;
+	}
+	
+	a.btn-blue { color: #fff; }
+	.btn-blue:hover { background: #287fc8; }
+
+	.btn-red {
+		border: 1px solid #b23730;
+		background-color: #c74039;
+		color: #fff;
+	}
+	
+	a.btn-red { color: #fff; }
+	.btn-red:hover { background: #ce4640; }
+
+	.btn-green {
+		border: 1px solid #819633;
+		background-color: #8da046;
+		color: #fff;
+	}
+	
+	a.btn-green{ color: #fff; }
+	.btn-green:hover { background: #93a749; }
+	
+/* ==========================================================================
+   #Callout Boxes
+   ========================================================================== */
+
+	.callout-box {
+		padding: 30px 20px;
+		margin-bottom: 30px;
+		background-color: #333;
+		color: #fff;
+	}
+	
+	/**
+ 	 * Callout box with one background image
+ 	 *
+	 * 1. background-image must be supplied using inline css as it is different for every .callout-box
+	 *
+	 */
+	 
+	.callout-box.bg-img {
+		background-repeat: no-repeat; /* 1 */ 
+		background-position: center center;
+		-webkit-background-size: cover;
+				background-size: cover;
+		color: #fff;
+	}
+	
+	/**
+ 	 * Callout box with repeating background image
+ 	 *
+	 * 1. background-image must be supplied using inline css as it is different for every .callout-box
+	 *
+	 */
+	 
+	.callout-box.bg-pattern {
+		background: repeat top left; /* 1 */	
+		color: #fff;
+	}
+	
+	.callout-box.bordered {
+		border: 1px solid #efefef;
+		background-color: #f5f5f5;
+	}
+	
+	/**
+ 	 * Callout box grid system
+ 	 *
+	 * 1. overwriting inherited .row width to 100% in order to make it fluid
+	 *
+	 */
+	
+	.callout-box .row { 
+		width: 100%; /* 1 */ 
+	}
+	
+	.callout-box .span1,
+	.callout-box .span2,
+	.callout-box .span3,
+	.callout-box .span4,
+	.callout-box .span5,
+	.callout-box .span6,
+	.callout-box .span7,
+	.callout-box .span8,
+	.callout-box .span9,
+	.callout-box .span10,
+	.callout-box .span11,
+	.callout-box .span12 {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 0 10px;
+		margin: 0;	
+	}
+	
+	.callout-box .span12 { width: 100%; }
+	.callout-box .span11 { width: 91.6666666667%; }
+	.callout-box .span10 { width: 83.3333333333%; }
+	.callout-box  .span9 { width: 75%; }
+	.callout-box  .span8 { width: 66.6666666667%; }
+	.callout-box  .span7 { width: 58.3333333333%; }
+	.callout-box  .span6 { width: 50%; }
+	.callout-box  .span5 { width: 41.6666666667%; }
+	.callout-box  .span4 { width: 33.3333333333%; }
+	.callout-box  .span3 { width: 25%; }
+	.callout-box  .span2 { width: 16.66666666666667%; }
+	.callout-box  .span1 { width: 8.333333333333333%; }
+  
+	@media (max-width: 767px) {
+	
+		.callout-box .span1,
+		.callout-box .span2,
+		.callout-box .span3,
+		.callout-box .span4,
+		.callout-box .span5,
+		.callout-box .span6,
+		.callout-box .span7,
+		.callout-box .span8,
+		.callout-box .span9,
+		.callout-box .span10,
+		.callout-box .span11,
+		.callout-box .span12 { width: 100%; }
+	  
+	}
+
+/* ==========================================================================
+   #Custom Lists
+   ========================================================================== */
+
+	/**
+ 	 * Custom lists
+ 	 *
+	 * 1. unstyled list
+	 * 2. list with squares for bullets
+	 * 3. list with discs for bullets
+	 *
+	 */
+	 
+	ul.unstyled { list-style-type: none; } /* 1 */
+	ul.square { list-style-type: square; } /* 2 */
+	ul.circle { list-style-type: circle; } /* 3 */
+	
+	/**
+ 	 * FontAwesome lists
+ 	 *
+	 * 1. Check list
+	 * 2. Plus list
+	 * 3. Pin list
+	 * 4. Fill circle list
+	 *
+	 */
+	 
+	ul.check,								/* 1 */
+	ul.plus,								/* 2 */
+	ul.pin,									/* 3 */
+	ul.fill-circle { list-style: none; }	/* 4 */
+	
+	ul.check li:before,
+	ul.plus li:before,
+	ul.pin li:before,
+	ul.fill-circle li:before { 
+		position: relative;
+		top: -2px;
+		// left: -20px;
+		width: auto;
+		height: auto;
+		margin-right: 4px;
+		color: #de4e43;
+		font-family: 'FontAwesome';
+		font-size: 10px;
+		font-style: normal;
+	}
+	
+	ul.fill-circle li:before { font-size: 7px; }
+	
+	ul.check li:before { content: ""; }
+	ul.plus li:before { content: ""; }
+	ul.pin li:before { content: ""; }
+	ul.fill-circle li:before { content: ""; }	
+
+/* ==========================================================================
+   #Dividers
+   ========================================================================== */
+
+	.divider { margin: 30px 0; }
+	
+	.divider.single-line { border-top: 1px solid #e2e2e2; }
+	
+	.divider.double-line { border-top: 4px double #e2e2e2; }
+	
+	.divider.single-dotted {
+		 height: 1px;
+		 background: url(../images/bg-single-dotted.gif) repeat-x top left ;  
+	}
+	
+	.divider.double-dotted { 
+		height: 4px;
+		background: url(../images/bg-double-dotted.gif) repeat-x top left; 
+	}	
+
+/* ==========================================================================
+   #Google Maps
+   ========================================================================== */
+
+	.google-map { 
+		min-height: 200px;
+	}
+	
+	.map { 
+		width: 100%; 
+		min-height: 400px; 
+		margin-bottom: 30px; 
+	}	
+
+/* ==========================================================================
+   #Icon Boxes
+   ========================================================================== */
+
+/* Icon Box 1
+   ========================================================================== */
+   
+	.icon-box-1 { 
+		position: relative; 
+		margin-bottom: 30px; 
+	}
+		
+	.icon-box-1 > i { 
+		float: left;
+		display: block;  
+		font-size: 32px; 
+		line-height: 32px; 
+	} 
+	
+	.icon-box-1 > img { 
+		float: left; 
+		display: block; 
+	} 
+	
+	.icon-box-1 .icon-box-content { margin-left: 42px; }
+	
+	.icon-box-1:hover > i { color: #de4e43; }
+
+/* Icon Box 2
+   ========================================================================== */
+   
+	.icon-box-2 { 
+		position: relative; 
+		margin-bottom: 30px; 
+	}
+		
+	.icon-box-2 > i { 
+		display: block;
+		margin-bottom: 10px; 
+		font-size: 48px;
+	}
+	
+	.icon-box-2 > img {
+		margin-bottom:10px;
+	}
+	
+	.icon-box-2 .icon-box-content { }
+	
+	.icon-box-2:hover > i { color: #de4e43; }	
+
+/* Icon Box 3
+   ========================================================================== */
+   
+	.icon-box-3 { 
+		position: relative; 
+		margin-bottom: 30px; 
+	}	
+	
+	.icon-box-3 > i { 
+		float: left;
+		margin-right: 10px;		 
+		font-size: 32px; 
+	} 
+	
+	.icon-box-3 > img { 
+		float: left; 
+		margin-right: 10px; 
+	} 
+	
+	.icon-box-3 .icon-box-content { }
+	
+	.icon-box-3:hover > i { color: #de4e43; }
+
+/* Icon Box 4
+   ========================================================================== */
+   
+	.icon-box-4 { 
+		position: relative; 
+		margin: 30px 0; 
+	}	
+	
+	/**
+	 * 1. Android Browser 2.3 does not support % value for border-radius
+	 * 2. Stop bg color from leaking outside the border	
+	 */
+	
+	.icon-box-4 > i {
+		position: absolute;	 
+		z-index: 20; 
+		left: 50%; 
+		width: 60px; 
+		height: 60px;
+		border: 1px solid #969696;
+		border-radius: 30px; /* 1 */
+		-webkit-border-radius: 50%;
+				border-radius: 50%;
+		margin-top: -30px; 
+		margin-left: -30px; 			
+		background-color: #e1e1e1;
+		background-clip: padding-box; /* 2 */		
+		color: #444444;
+		font-size: 32px;
+		line-height: 60px;
+		text-align: center; 
+	}
+	 
+	.icon-box-4 .icon-box-content { 
+		position: relative;
+		z-index: 10;
+		padding: 55px 40px 40px;
+		border: 1px solid #e0e0e0; 
+		-webkit-border-radius: 50%;
+				border-radius: 3px; 
+		margin-top: 16px;
+		background-color: #f4f4f4;
+		text-align: center; 
+	}
+	
+	.icon-box-4:hover > i { color: #de4e43; }
+
+/* Icon Box 5
+   ========================================================================== */
+   
+	.icon-box-5 { 
+		position: relative; 
+		margin-bottom: 30px; 
+	}	
+		
+	.icon-box-5 > i { 
+		position: absolute;
+		z-index: 20; 
+		top: 50%;
+		left: 0; 
+		width: 60px; 
+		height: 60px;
+		border: 1px solid #969696;
+		border-radius: 30px;
+		-webkit-border-radius: 50%;
+				border-radius: 50%;
+		margin-top: -30px; 
+		background-color: #e1e1e1;
+		background-clip: padding-box; 
+		color: #444444;
+		font-size: 32px;
+		line-height: 60px;
+		text-align: center;  
+	} 
+	
+	.icon-box-5 .icon-box-content { 
+		position: relative;
+		z-index: 10;
+		padding: 40px 40px 40px 55px;
+		border: 1px solid #e0e0e0; 
+		-webkit-border-radius: 3px;
+				border-radius: 3px;
+		margin-left: 30px;	
+		background-color: #f4f4f4;
+		text-align: center; 
+	}	
+	
+	.icon-box-5:hover > i { color: #de4e43; }				
+
+/* ==========================================================================
+   #Milestones
+   ========================================================================== */
+
+	.milestone {
+		position: relative;
+		margin-bottom: 30px;
+	}
+	
+	/*
+	 * 1. Clearfix hack 
+	 */
+	.milestone:after { /* 1 */
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+	
+	.milestone i {
+		float: left;
+		z-index: 20;
+		margin-right: 10px;
+		font-size: 32px;
+	}
+	
+	.milestone .milestone-content {
+		float: left;
+		z-index: 10;
+		font-size: 26px;
+		line-height: 32px;
+	}
+	
+	.milestone .milestone-description { 
+		font-size: 14px;
+		line-height: 21px; 
+	}
+	
+/* ==========================================================================
+   #Parallax
+   ========================================================================== */
+
+	.parallax {
+		overflow: hidden;
+		margin-bottom: 30px;
+		background-attachment: scroll;
+		background-repeat: no-repeat;
+		background-position: 50% 0;
+		-webkit-background-size: cover;
+				background-size: cover;		
+	}
+	
+	.parallax.parallax-enabled { background-attachment: fixed !important; }
+	
+	/*
+	 * 1. Overwite element color when in parallax
+	 */
+	
+	.parallax { color :#fff; } /* 1 */
+	
+	.parallax h1, 
+	.parallax h2, 
+	.parallax h3, 
+	.parallax h4, 
+	.parallax h5, 
+	.parallax h6 { color: #fff; }
+	
+	.parallax abbr[title] { border-bottom: 1px dotted #fff; }		
+	
+	/*
+	 * 1. added this because adding position: relative; to .parallax breaks parallax backgrounds in chrome
+	 * 2. Parallax texture overlay
+	 * 3. should be used to wrap parallax content if you are using a Parallax texture overlay
+	 *
+	 */
+	
+	.parallax-content { 	/* 1 */
+		position: relative;
+		z-index: 1;	
+	}
+	
+	.parallax-overlay { /* 2 */
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-attachment: scroll;
+		background-repeat: repeat;
+		background-position: 0 0;
+	}
+	
+	.parallax-content-inner { /* 3 */
+		position: relative;
+		z-index: 3;
+	}
+
+/* ==========================================================================
+   #Pie charts
+   ========================================================================== */
+
+	.pie-chart {
+		position: relative;
+		float: left;
+		text-align: center;
+	}
+	
+	.pie-chart canvas {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+	}
+	
+	.pie-chart i, 
+	.pie-chart .pie-chart-custom-text, 
+	.pie-chart .pie-chart-percent {
+		position: absolute;
+		z-index: 10;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 100%;
+		color: #444444;
+		text-align: center;
+	}
+	
+	.pie-chart img {
+		max-width: 100%;
+		vertical-align: middle;
+	}
+	
+	.pie-chart .pie-chart-custom-text { font-size: 18px; }
+	
+	.pie-chart .pie-chart-percent {
+		font-size: 16px;
+		font-weight: 700;
+	}
+	
+	.pie-chart-description { margin-left: 180px; }
+	
+	@media (max-width: 767px) { 
+	
+		.pie-chart { 
+			float: none;
+			margin: 0 auto 30px;
+		}
+			
+		.pie-chart-description { margin-left: 0; }
+		
+	}
+
+/* ==========================================================================
+   #Pricing Tables
+   ========================================================================== */
+
+	.pricing-table {
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 40px;
+		border: 1px solid #ccc;
+		margin-bottom: 30px;
+		text-align: center;
+		-webkit-transition: all 0.3s ease 0s;
+			 -o-transition: all 0.3s ease 0s;
+				transition: all 0.3s ease 0s;
+	}
+
+	.pricing-table-header {	margin-bottom: 20px; }
+
+	.pricing-table-header h1 {
+		padding: 10px 0;
+		margin-bottom: 0;
+		font-size: 40px;
+	}
+	.pricing-table-header h1 sup {
+		font-size: 25px;
+		font-weight: 700;
+	}
+
+	.pricing-table-header h4 {}
+		
+	.pricing-table-offer {}
+	
+	.pricing-table-offer ul { list-style: none; }
+	
+	.pricing-table-offer ul li { 
+		padding: 10px 0;
+		border-top: 1px solid #ccc;  
+	}
+	
+	.pricing-table-offer ul li:first-child { border-top: none; }
+	
+	.pricing-table:hover {
+		border-color: #de4e43;
+		-webkit-transform: scale(1.1); 
+		    -ms-transform: scale(1.1);
+			 -o-transform: scale(1.1);
+				transform: scale(1.1); 
+	}
+	
+	@media (max-width: 767px) {
+		
+		.pricing-table:hover {
+			-webkit-transform: none; 
+				-ms-transform: none;
+				 -o-transform: none;
+					transform: none; 
+		}
+	
+	}
+
+/* ==========================================================================
+   #ProgressBars
+   ========================================================================== */
+
+	.skill-bar-description {
+		position: relative;
+		display: block;
+		max-width: 60%;
+		margin-bottom: 10px;
+		font-size: 18px;
+		font-weight: 700;
+	}
+	
+	.skill-bar-description span:after {
+		position: absolute;
+		bottom: -7px;
+		right: 0;
+		width: 0;
+		height: 0;
+		border-top: 7px solid #444444;
+		border-left: 10px solid rgba(0, 0, 0, 0);
+		content: "";
+		transform: scale(0.9999);
+	}
+	
+	.skill-bar-description span {
+		position: absolute;
+		top: -7px;
+		left: 0;
+		padding: 5px 10px;
+		margin-left: -45px;
+		background-color: #444444;
+		color: #fff;
+		font-size: 12px;
+		line-height: 20px;	
+	}
+	
+	.skill-bar {
+		position: relative;
+		display: block;
+		max-width: 60%;
+		height: 14px;
+		margin-bottom: 15px;
+		background-color: #cb463d; //rgba(0, 0, 0, 0.15);
+	}
+	
+	.skill-bar .skill-bar-outer {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		background-color: #de4e43;
+	}
+	
+	.skill-bar .skill-bar-outer .skill-bar-inner {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		left: 0;
+		display: block;
+		overflow: hidden;
+		height: 100%;
+		width: 100%;
+	}
+	
+	@media (max-width: 767px) { 
+	
+		.skill-bar-description,
+		.skill-bar { max-width: 100%; }
+	
+	}
+
+/* ==========================================================================
+   #SocialMedia
+   ========================================================================== */
+
+	a.social-icon {
+		float: left;
+		display: block;
+		width: 32px;
+		margin-right: 15px;
+		margin-bottom: 5px;
+		background-color: #252525;
+		color: #fff;
+		text-align: center;
+	}
+
+	a.social-icon:last-child { margin-right: 0; }
+
+	a.social-icon i {
+		font-size: 16px;
+		line-height: 32px;
+	}
+	
+	a.social-icon:hover { text-decoration: none; }
+	
+	a.facebook-icon:hover { background-color: #0e59a0 !important; }
+	a.twitter-icon:hover { background-color: #0ea4ff !important; }
+	a.dribble-icon:hover { background-color: #ea73a0 !important; }
+	a.pinterest-icon:hover { background-color: #d73532 !important; }
+	a.googleplus-icon:hover { background-color: #282927 !important; }
+	a.tumblr-icon:hover { background-color: #586980 !important; }
+	a.instagram-icon:hover { background-color: #82685a !important; }
+	a.rss-icon:hover { background-color: #f79638 !important; }
+	a.linkedin-icon:hover { background-color: #018faf !important; }
+	a.skype-icon:hover { background-color: #00b0f6 !important; }
+	a.flickr-icon:hover { background-color: #0061db !important; }
+	a.vimeo-icon:hover { background-color: #63879c !important; }
+	a.github-icon:hover { background-color: #3b3b3b !important; }
+	a.youtube-icon:hover { background-color: #cc181e !important; }
+	a.windows-icon:hover { background-color: #6dc2e9 !important; }
+	a.dropbox-icon:hover { background-color: #007ee5 !important; }
+	a.xing-icon:hover { background-color: #026566 !important; }
+
+/* ==========================================================================
+   #Styled Tables
+   ========================================================================== */
+
+	.table-bordered { 
+		border: 1px solid #efefef;
+		border-left: none; 
+		border-collapse: separate; 
+	}
+	
+	.table-bordered th {
+		padding: 20px 10px;
+		border-left: 1px solid #fff; 
+		background-color: #de4e43;
+		color: #fff;
+		font-size: 16px;
+	}
+	
+	.table-bordered td { border-left: 1px solid #efefef; }
+
+	.table-bordered caption + thead tr:first-child th,
+	.table-bordered caption + tbody tr:first-child th,
+	.table-bordered caption + tbody tr:first-child td,
+	.table-bordered colgroup + thead tr:first-child th,
+	.table-bordered colgroup + tbody tr:first-child th,
+	.table-bordered colgroup + tbody tr:first-child td,
+	.table-bordered thead:first-child tr:first-child th,
+	.table-bordered tbody:first-child tr:first-child th,
+	.table-bordered tbody:first-child tr:first-child td { border-top: none; }
+
+	.table-condensed th,
+	.table-condensed td { padding: 4px 8px; }
+	
+	.table-striped tbody tr:nth-child(odd) td,
+	.table-striped tbody tr:nth-child(odd) th { background-color: #f9f9f9; }	
+
+	@media (max-width: 480px) {
+	
+		/**
+		 * Force table to not be like tables anymore
+		 */
+		 
+		table, 
+		thead, 
+		tbody, 
+		th, 
+		td, 
+		tr { display: block; }
+		
+		/**
+		 * Hide table headers
+		 */
+	
+		thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+		
+		tr { border-top: 1px solid #555; }
+		
+		td:first-child { border-top: none !important; }
+	  
+	}
+
+/* ==========================================================================
+   #Tabs
+   ========================================================================== */
+
+	/* Horizontal tabs */
+		
+   /*
+    *  1. Wraps around a horizontal tab group
+	*/
+   
+	.tabs-container {} /* 1 */
+
+	.tabs-container .tabs-menu { 
+		border-bottom: 1px solid #e9e9e9;
+		margin-top: 10px; 
+		margin-bottom: 0;
+		list-style: none; 
+	}
+	
+	.tabs-container .tabs-menu li { display: inline; }
+	
+	.tabs-container .tabs-menu li a { 
+		float: left; 
+		display: block;
+		padding: 10px 25px; 
+		border: 1px solid #e7e7e7;
+		border-left: none;		
+		margin-bottom: -1px; 
+		background-color: #de4e43;
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	.tabs-container .tabs-menu li a:hover {
+		text-decoration: none;
+	}
+	
+	.tabs-container .tabs-menu li:first-child a {
+		border-left: 1px solid #e7e7e7;
+	}
+	
+	.tabs-container .tabs-menu li.active a {
+		border-left: 1px solid #e7e7e7;
+		border-bottom-color: #fff; 
+		background-color: #fff;
+		color: #666; 
+	}
+	
+	.tabs-container .tabs {
+		border: 1px solid #e9e9e9; 
+		border-top: none;   
+		margin-bottom: 30px;
+	}
+	
+	.tabs-container .tab-content { 
+		padding: 25px;
+	}
+	
+	/* Vertical tabs */
+	
+	.vertical-tabs-container {
+		position: relative;
+		border: 1px solid #e7e7e7;
+		background-color: #de4e43;
+	}
+	
+	.vertical-tabs-container .tabs-menu { 
+		float: left;
+		width: 179px;
+		border-right: 1px solid #e7e7e7;
+		margin-bottom: 0;
+		list-style: none;
+	}
+	
+	.vertical-tabs-container .tabs-menu li a { 
+		display: block;
+		padding: 15px 25px; 
+		border-bottom: 1px solid #e7e7e7;
+		border-right: 1px solid #e7e7e7;	
+		margin-right: -1px; 
+		background-color: #de4e43;
+		color: #fff;
+		text-decoration: none;
+	}
+	
+	.vertical-tabs-container .tabs-menu li.active a {
+		border-right-color: #fff;
+		background-color: #fff;
+		color: #666;
+	}
+	
+	.vertical-tabs-container  .tabs {
+		background-color: #fff;
+		margin-left: 180px;	
+	}
+	
+	.vertical-tabs-container .tab-content { 
+		padding: 25px; 
+	}
+	
+	@media (max-width: 767px) {
+	
+		.tabs-container .tabs-menu { border-bottom: none; }
+		
+		.tabs-container .tabs-menu li { display: block; }
+	
+		.tabs-container .tabs-menu li a { 
+			float: none; 
+			display: block;
+			padding: 20px 25px;
+			border: 1px solid #e7e7e7;
+			border-top: none;
+			margin: 0;
+		}
+		
+		.tabs-container .tabs-menu li a:hover { text-decoration: none; }
+		
+		.tabs-container .tabs-menu li:first-child a { border-top: 1px solid #e7e7e7; }
+		
+		.tabs-container .tabs-menu li.active a {  
+			padding: 20px 25px;
+			border-bottom-color: #555;
+			margin: 0;
+			background-color: #fff;
+			color: #666; 
+		}
+		
+		.vertical-tabs-container .tabs-menu { 
+			float: none;
+			width: 100%;
+		}
+		
+		.vertical-tabs-container  .tabs {
+			margin-left: 0;
+		}
+		
+		.vertical-tabs-container .tabs-menu li a {
+			padding: 20px 25px;
+			border-right: none;
+			margin-right: 0;
+		}
+
+		.vertical-tabs-container .tabs-menu li.active a { border-bottom-color: #333; }		
+	  
+	}
+	
+/* ==========================================================================
+   #Testimonials
+   ========================================================================== */
+
+	.testimonial { margin-bottom: 30px; }
+	
+	.testimonial blockquote { 
+		position: relative; 
+		padding: 20px;
+		border: 1px solid #ddd;
+		-webkit-border-radius: 5px; 
+				border-radius: 5px; 
+		margin-bottom: 20px;  
+		background-color: #ebebeb;
+	}
+	
+	.testimonial blockquote p { 
+		margin-bottom: 0; 
+		font-style: normal; 
+	}
+	
+	.testimonial blockquote:after, 
+	.testimonial blockquote:before {
+		position: absolute;
+		top: auto;
+		right: auto;
+		bottom: -20px;
+		left: 80px;
+		width: auto;
+		height: auto;
+		border-color: #ebebeb rgba(0, 0, 0, 0) rgba(0, 0, 0, 0) #ebebeb;
+		border-image: none;
+		border-style: solid;
+		border-width: 10px;
+		content: "";
+	}
+
+	.testimonial img { 
+		float: left; 
+		-webkit-border-radius: 50%;
+				border-radius: 50%;  
+		margin-right: 20px;
+	}
+	
+	.testimonial h5 { margin-top: 40px; }
+	
+	.testimonial a { color: #555; }
+	
+	.testimonial h5 span { color: #999; }

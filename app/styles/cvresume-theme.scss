@@ -1,0 +1,44 @@
+// $color-red: (
+//   '50': #DE4E43,
+//   '100': #da4c42,
+//   '200': #d64b41,
+//   '300': #d2493f,
+//   '400': #ce483e,
+//   '500': #cb463d,
+//   '600': #c7453c,
+//   '700': #C3433A,
+//   '800': #bf4239,
+//   '900': #bb4038,
+//   'A100': #ff8a80,
+//   'A200': #ff5252,
+//   'A400': #ff1744,
+//   'A700': #d50000,
+//   'contrast': $light-contrast-color
+// );
+
+
+$theme-name: "default";
+
+$primary: "red";
+$accent: "blue";
+$warn: "pink";
+$background: "grey";
+$link: "light-blue";
+
+$dark: false;
+$default-color: '500';
+
+$foreground: "foreground-dark";
+$foreground-shadow: $foreground-light-shadow;
+ 
+$base-background-color: white;
+$base-color: "rgb(222, 78, 67)";/* ROBOTO DRAFT FONT */
+
+// $primary-color-dark:   #bb4038
+// $primary-color:        #de4e43
+// $primary-color-light:  #FFCDD2
+// $primary-color-text:   #FFFFFF
+// $accent-color:         #9E9E9E
+// $primary-text-color:   #26343b
+// $secondary-text-color: #727272
+// $divider-color:        #B6B6B6

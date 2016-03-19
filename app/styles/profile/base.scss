@@ -1,0 +1,489 @@
+/**
+ * Name: base.css
+ * Version: 1.0.0
+ *	
+ *	-
+ *
+ *	T.O.C
+ *	
+ *	#CssReset
+ *	#Typography
+ *		#Links
+ *		#Lists
+ *		#Images
+ *		#Tables
+ *		#Forms
+ *		#Misc
+ */
+
+
+/* ==========================================================================
+   #CssReset
+   ========================================================================== */
+
+	html, body, div, span, applet, object, iframe,
+	h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	a, abbr, acronym, address, big, cite, code,
+	del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var,
+	b, u, i, center,
+	dl, dt, dd, ol, ul, li,
+	fieldset, form, label, legend,
+	table, caption, tbody, tfoot, thead, tr, th, td,
+	article, aside, canvas, details, embed, 
+	figure, figcaption, footer, header, hgroup, 
+	menu, nav, output, ruby, section, summary,
+	time, mark, audio, video {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+	
+	/* HTML5 display-role reset for older browsers */
+	
+	article, 
+	aside, 
+	details, 
+	figcaption, 
+	figure, 
+	footer, 
+	header, 
+	hgroup, 
+	menu, 
+	nav, 
+	section {
+		display: block;
+	}
+	
+	body {
+		line-height: 1;
+	}
+	
+	ol, 
+	ul {
+		list-style: none;
+	}
+	
+	blockquote, 
+	q {
+		quotes: none;
+	}
+	
+	blockquote:before, 
+	blockquote:after,
+	q:before, 
+	q:after {
+		content: "";
+		content: none;
+	}
+	
+	table {
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	
+	/**
+	 * 1. Always force vertical scroll
+	 * 2. Prevent iOS text size adjust after orientation change, without disabling user zoom.
+	 */
+	
+	html { 
+		font-size: 100%; 
+		overflow-y: scroll; /* 1  */ 
+		-ms-text-size-adjust: 100%; /* 2 */
+    	-webkit-text-size-adjust: 100%; /* 2 */
+		-webkit-font-smoothing: antialiased; 
+	}
+
+
+/* ==========================================================================
+   #Typography
+   ========================================================================== */
+   
+	body {
+		background: #222 url(/assets/images/white-bed-sheet.png) repeat top left;
+		
+		/*
+		background: #222 url(../images/bg-body.png) repeat top left;
+		background: #222 url(../images/bg-body2.png) repeat top left;
+		background: #222 url(../images/bg-body3.png) repeat top left;
+		background: #222 url(../images/bg-body4.png) repeat top left;
+		background: #222 url(../images/bg-body5.png) repeat top left;
+		background: #222 url(../images/bg-body6.png) repeat top left;
+		background: #222 url(../images/bg-body7.png) repeat top left;
+		background: #222 url(../images/bg-body8.png) repeat top left;
+		background: #222 url(../images/bg-body9.png) repeat top left;
+		background: #222 url(../images/bg-body10.png) repeat top left;
+		background: #222 url(../images/bg-body11.png) repeat top left;
+		background: #222 url(../images/bg-body12.png) repeat top left;
+		background: #222 url(../images/bg-body13.png) repeat top left;
+		background: #222 url(../images/bg-body14.png) repeat top left;
+		background: #222 url(../images/bg-body15.png) repeat top left;
+		background: #222 url(../images/bg-body16.png) repeat top left;
+		background: #222 url(../images/bg-body17.png) repeat top left;
+		background: #222 url(../images/bg-body18.png) repeat top left;
+		background: #222 url(../images/bg-body19.png) repeat top left;
+		background: #222 url(../images/bg-body20.png) repeat top left;
+		
+		background: #222 url(../images/bg-body21.jpg) no-repeat fixed top left;
+		*/
+		
+		color: #444;
+		font: 13px 'Open Sans', Arial, sans-serif;
+		line-height: 21px;	
+	}
+	
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5, 
+	h6 {
+		color: #444;
+		font-family: 'Open Sans', Arial, sans-serif;
+		font-weight: 300; 
+	}
+		
+	h1 a, 
+	h2 a, 
+	h3 a, 
+	h4 a, 
+	h5 a, 
+	h6 a { 
+		font-weight: inherit; 
+	}
+	
+	h1 {
+		margin-bottom: 14px; 	 
+		font-size: 48px; 
+		line-height: 50px; 
+	}
+	
+	h2 { 
+		margin-bottom: 10px;	
+		font-size: 24px; 
+		line-height: 40px;  
+	}
+	
+	h3 { 
+		margin-bottom: 8px;
+		font-size: 18px; 
+		line-height: 34px;   
+	}
+	
+	h4 {
+		margin-bottom: 4px; 
+		font-size: 16px; 
+		line-height: 30px;   
+	}
+	
+	h5 { 
+		font-size: 14px; 
+		line-height: 24px; 
+	}
+	
+	h6 { 
+		font-size: 12px; 
+		line-height: 21px; 
+	}
+	
+	p { margin-bottom: 20px; }
+	em { font-style: italic; }
+	strong { font-weight: bold; }
+	small { font-size: 50%; }
+	
+	sub { 
+		vertical-align: sub; 
+		font-size: 75%; 
+	}
+	
+	sup { 
+		vertical-align: super; 
+		font-size: 75%; 
+	}
+	
+	abbr[title] {  
+		border-bottom: 1px dotted #999; 
+		cursor: help;
+	}
+	
+	address { 
+		display: block; 
+		margin-bottom: 20px; 
+	}
+	
+	blockquote {}
+	
+	blockquote p { font-style: italic; }
+	
+	blockquote span { 
+		display: block;
+		margin-top: 5px;
+		color: #999999;  
+	}
+	
+	blockquote span:before { content: '\2013 \00A0'; }
+
+	hr { 
+		height: 0; 
+		border: solid #efefef; 
+		border-width: 1px 0 0 0;
+		margin: 30px 0;
+	}
+
+	code, 
+	pre { 
+		-webkit-border-radius: 3px;
+			    border-radius: 3px;	
+		font-family: Monaco, Menlo, Consolas, "Courier New", monospace;			
+	}
+	
+	code { 
+		padding: 1px 4px;
+		border: 1px solid #e1e1e8;
+		background-color: #f7f7f7;  
+		color: #d14;  
+	}
+	
+	pre { 
+		display: block;
+		padding: 20px;
+		border: 1px solid #e1e1e8;   
+		margin-bottom: 20px;
+		overflow-x: auto; 
+		white-space: pre-wrap;
+		background-color: #f7f7f7; 
+	}
+	
+	/* Typography Helper Classes */
+	
+	/**
+	 * <div class="hr"></div> acts like an <hr />
+	 */
+	
+	.hr { 
+		border-top: 1px solid #efefef;  
+		margin: 30px 0;
+	}
+	
+	.text-left { text-align: left; }
+	.text-right { text-align: right; }
+	.text-center { text-align: center; }
+	
+	.text-highlight { 
+		padding: 1px 5px; 
+		background-color: #d5edf8; 
+		color: #111111; 
+	}
+
+	.text-uppercase { text-transform: uppercase; }
+	
+	.mute{ color: #aaa; }
+	
+	p.last,
+	h1.last,
+	h2.last,
+	h3.last,
+	h4.last,
+	h5.last,
+	address.last { margin-bottom: 0; }
+	
+/* #Links
+   ========================================================================== */
+	
+	a, 
+	a:visited { 
+		color: #444; 
+		text-decoration: none; 
+	}
+	
+   /**
+	* 1. Remove the gray background color from active links in IE 10.
+	*/
+	
+	a:active {
+ 		background: transparent; /* 1 */
+	}
+	
+	a:hover, 
+	a:focus { 
+		text-decoration: underline;
+		outline: none; 
+	}	
+	
+/* #Lists
+   ========================================================================== */
+	
+	ul, 
+	ol { 
+		margin-bottom: 20px;
+		list-style-position: inside; 
+	}
+	
+	ul ul, 
+	ul ol, 
+	ol ol, 
+	ol ul { 
+		margin-left: 5px; 
+		margin-bottom: 0; 
+	}
+	
+	li {}
+	
+	ul { list-style-type: disc; }
+	ol { list-style-type: decimal; }
+	
+	/* List Helper Classes */
+
+	ul.last,
+	ol.last { margin-bottom:0; }
+
+/* #Images
+   ========================================================================== */
+	
+	img {
+		border: none; 
+	}
+	
+	/* Images Helper Classes */
+	
+	.img-align-left { 
+		float: left;
+		margin: 5px 10px 0 0;  
+	}
+	
+	.img-align-right { 
+		float: right;
+		margin: 5px 0 0 10px; 
+	}
+
+/* #Tables
+   ========================================================================== */
+
+	table { 
+		width: 100%;
+		margin-bottom: 20px; 
+		border-collapse: collapse; 
+		border-spacing: 0; 
+		background-color: transparent; 
+	}
+	
+	caption { 
+		margin: 20px 0;
+		text-align: center; 
+		font-weight: bold; 
+	}
+
+	table th, 
+	table td {
+		padding: 15px 10px; 
+		border-top: 1px solid #efefef;
+		text-align: center; 
+		vertical-align: top; 
+	}
+	
+	table th { 
+		border-top: none;
+		font-weight: bold;  
+	}
+	
+	table thead th { vertical-align: bottom; }
+	
+/* #Forms
+   ========================================================================== */
+
+	form {}
+	
+	fieldset {}
+	
+	form p {}
+	
+	label {
+		display: block;
+		margin-bottom: 5px;
+	}
+
+	label span { color: #ff0000; }
+	
+	select,
+	button,
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	input[type="radio"],
+	input[type="checkbox"] {
+	  cursor: pointer;
+	}
+	
+	input,
+	textarea,
+	select {
+		display: block;
+		max-width: 100%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 6px 10px;
+		border: 1px solid #ddd;
+		margin-bottom: 10px;
+		background: #fff;
+		color: #666;
+		font: 12px 'Open Sans', Arial, sans-serif;			 
+	}
+	
+	input[type="text"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	textarea:focus {
+		border-color: #888;
+  		outline: none;	
+	}
+	
+	select { height: 32px; }
+	
+	select:focus {
+	  outline: thin dotted #333;
+	  outline: 5px auto -webkit-focus-ring-color;
+	  outline-offset: -2px;
+	}
+	
+	textarea { 
+		height: 120px;
+		overflow: auto; 
+	}
+
+	.radio,
+	.checkbox {
+		min-height: 18px;
+		padding-left: 18px;
+	}
+	
+	.radio input[type="radio"],
+	.checkbox input[type="checkbox"] {
+		float: left;
+		margin-left: -18px;
+	}
+	
+	input:-moz-placeholder,
+	textarea:-moz-placeholder {
+		color: #ccc;
+	}
+	
+	input:-ms-input-placeholder,
+	textarea:-ms-input-placeholder {
+		color: #ccc;
+	}
+	
+	input::-webkit-input-placeholder,
+	textarea::-webkit-input-placeholder {
+		color: #ccc;
+	}
+
+/* #Misc
+   ========================================================================== */
+   
+   
+   

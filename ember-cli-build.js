@@ -4,7 +4,21 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    'ember-cli-preloader': {
+      paths: {
+        html: 'app/preloader/preloader.html',
+        css: 'app/preloader/preloader.css'
+      }
+    },
+    fingerprint: {
+      exclude: [
+        'images/layers-2x.png',
+        'images/layers.png',
+        'images/marker-icon-2x.png',
+        'images/marker-icon.png',
+        'images/marker-shadow.png'
+      ]
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
@@ -19,6 +33,8 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  // app.import('vendor/selectfield.js');
+
 
   return app.toTree();
 };

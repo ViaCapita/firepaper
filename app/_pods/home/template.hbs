@@ -1,0 +1,77 @@
+{{#paper-nav-container class="site-nav-container"}}
+  <div layout="column" tabindex="-1" role="main" flex>
+    {{#paper-toolbar}}
+      <div class="md-toolbar-tools">
+        <div class="logo" style="padding-left: 45px;">
+          <img src="/firepaper-logo.png"/> 
+        </div>
+        <span class="md-breadcrumb-page">
+          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  
+        </span>
+{{!--         {{#paper-button action="goTo" param="home.about"}}
+          About
+        {{/paper-button}}
+        {{#paper-button action="goTo" param="home.showcase"}}
+          Showcase
+        {{/paper-button}}
+        {{#paper-button action="goTo" param="home.faq"}}
+          FAQ
+        {{/paper-button}} --}}
+        {{#if person.anonymous}}
+          <div class="social-login-buttons">
+{{!--             <a href="#" {{action 'signIn' 'facebook'}} class="social-login-button facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+            <a href="#" {{action 'signIn' 'twitter'}} class="social-login-button twitter">
+              <i class="fa fa-twitter"></i>
+            </a> --}}
+            <a href="#" {{action 'signIn' 'google'}} class="social-login-button google">
+              <i class="fa fa-google"></i>
+            </a>
+{{!--             <a href="#" {{action 'signIn' 'github'}} class="social-login-button github">
+              <i class="fa fa-github"></i>
+            </a> --}}
+          </div>
+        {{else}}
+          {{#paper-button action="goTo" param="my.index"}}
+            My Firepaper
+          {{/paper-button}}
+        {{/if}}
+      </div>     
+    {{/paper-toolbar}}
+    {{#paper-content}}
+      {{liquid-outlet}}
+     
+      <div class="mega-footer cvresume-footer">
+        <div class="mdl-mega-footer--middle-section">
+          <span class="mdl-layout-title">
+            <div class="left-quarter">
+              <img src="/firepaper-logo.png" style="padding-top: 10px; padding-left: 30px;">
+            </div>
+            <div class="right-three-quarters">
+              <h3 style="color: #ffffff; margin-top: 20px; text-align:right; padding-right:10px;">Follow us on Social Media</h3> 
+              <div class="social-login-buttons" style="padding-right: 10px; text-align:right;">
+                <a href="#" class="social-login-button facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="social-login-button twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="social-login-button google">
+                  <i class="fa fa-google"></i>
+                </a>
+                <a href="#" class="social-login-button github">
+                  <i class="fa fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="mdl-mega-footer--bottom-section button-footer" style="padding-bottom: 20px;">
+        </div>
+      </div>     
+    {{/paper-content}} 
+  </div>
+{{/paper-nav-container}}
+
+

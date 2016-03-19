@@ -1,0 +1,34 @@
+@import "screen";
+@import "myvar";
+.services_4 {
+    section {
+        @extend %white;
+        // @include clearfix;
+        @include bp-at-least($breakpoint__sm) {
+            padding: 5.3125em 5em;
+        }
+
+        @include bp-until($breakpoint__sm) {
+            padding: 3.5em 2.5em;
+        }
+
+        p {
+            font-size: 1.01em;
+            color: #26C6DA;
+            margin-bottom: .5em;
+        }
+        h1 {
+            color: #595757;
+            font-size: 1.875em;
+            text-transform: capitalize;
+            @extend %sans--light;
+        }
+        aside {
+            p {
+                font-size: 1.01em;
+                color: #787777;
+                line-height: 1.6;
+            }
+        }
+    }
+}

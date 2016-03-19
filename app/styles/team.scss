@@ -1,0 +1,130 @@
+.team_member {
+  width:100%;
+  position:relative;
+  overflow:hidden;
+  height:300px;
+}
+
+.team-info {
+  height:100%;
+}
+
+.team-info img {
+  width:300px;
+  transition: all .4s ease-out .1s;
+   -moz-transition: all .4s ease-out .1s;
+   -webkit-transition: all .4s ease-out .1s;
+}
+
+.team-info h5 {
+  padding: 10px 10px 0 0;
+  margin: 0 0 10px 3px;
+  line-height: 1em;
+  opacity: 1;
+  transition: all .2s ease-out .1s;
+   -moz-transition: all .2s ease-out .1s;
+   -webkit-transition: all .2s ease-out .1s;
+  font-size: 1.125em;
+}
+
+.team-info h6 {
+  padding:0 10px 0 0;
+  font-size:12px;
+  margin:0 0 0 3px;
+  line-height:1em;
+  text-transform:uppercase;
+  color:#999;
+  opacity:1;
+  transition: all .2s ease-out .1s;
+   -moz-transition: all .2s ease-out .1s;
+   -webkit-transition: all .2s ease-out .1s;
+}
+
+.team-info_reveal {
+  height:100%; 
+  transition: all .3s ease-in 0s;
+   -moz-transition: all .3s ease-in 0s;
+   -webkit-transition: all .23s ease-in 0s;
+  position:absolute;
+  width:100%;
+  left:0;
+  top:-100%;
+  background: rgba(19,148,119,0.9);
+}
+
+.team-info_reveal h6 {
+  padding: 20px 8px 5px 8px;
+  line-height: 1.1em;
+    margin-bottom: 20px;
+    color: #fff;
+  font-size: 1em;
+}
+
+.team-info_reveal p {
+  padding:0 8px;
+  font-size:15px;
+  line-height: 1.2em;
+  color: #073a2e;
+  font-weight:400;  
+}
+
+.team-info_reveal a {
+  color: #073a2e;
+  word-break: break-word;
+  text-decoration:none;
+}
+
+.team-info_reveal a:hover {
+  color: #073a2e;
+}
+
+
+.responsive_grid {
+  display:block;
+  // margin:0;
+  padding-left:12.5%;
+  list-style:none;
+  width: 100%;
+  margin: 0 auto;  
+}
+
+.responsive_grid li {
+ cursor:pointer;
+ width: calc(33.333333%-10px);
+ padding: 0 10px 10px;
+ display:block;
+ height:auto;
+ float:left;
+ margin-bottom:10px;
+}
+
+.responsive_grid li:hover .team-info_reveal,
+.responsive_grid li:focus .team-info_reveal{
+ left: 0;
+ top:0;
+ transition: all .3s ease-out .1s;
+   -moz-transition: all .3s ease-out .1s;
+   -webkit-transition: all .3s ease-out .1s;
+}
+
+.responsive_grid li:hover .team-info img,
+.responsive_grid li:focus .team-info img {
+  width:210%;
+  margin-left:-50%;
+  transition: all .4s ease-in 0s;
+   -moz-transition: all .4s ease-in 0s;
+   -webkit-transition: all .4s ease-in 0s;
+}
+
+.responsive_grid li:hover .team-info h5,
+.responsive_grid li:focus .team-info h5,
+.responsive_grid li:hover .team-info h6,
+.responsive_grid li:focus .team-info h6 {
+  opacity: 0;
+  transition: opacity .2s linear 0s;
+   -moz-transition: opacity .2s linear 0s;
+   -webkit-transition: opacity .2s linear 0s;
+}
+
+
+

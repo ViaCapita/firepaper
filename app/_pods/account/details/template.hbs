@@ -1,0 +1,86 @@
+{{#paper-toolbar class='cv-dark-red-sidebar'}}
+  <div class="md-toolbar-tools">
+    <div class="left-toolbar">
+      <span class="md-breadcrumb-page">
+        Please edit your Account Details below.
+      </span>
+    </div>
+    <div class="right-toolbar">
+    {{!--  {{#paper-button action='goTo' param='account.details' icon-button=true}}
+        {{paper-icon "account-circle"}}
+      {{/paper-button}}
+       {{#paper-button action='goTo' param='account.settings' icon-button=true}}
+        {{paper-icon "settings"}}
+      {{/paper-button}}
+      {{#paper-button action='goTo' param='account.permissions' icon-button=true}}
+        {{paper-icon "security"}}
+      {{/paper-button}}
+      {{#paper-button action='goTo' param='account.avatar' icon-button=true}}
+        {{paper-icon "tag-faces"}}
+      {{/paper-button}} --}}
+    </div>
+  </div>
+{{/paper-toolbar}}
+{{!-- {{#if openPicker}}
+  {{ember-filepicker options=imageOptions onSelection='filepickerSelected' onClose='filepickerClosed' onError='filepickerError'}}
+{{/if}} --}}
+{{#paper-content class="md-padding"}}  
+  <p class="cvr-black">    
+    <div class="left-quarter">
+      <div class="avatar-container p-36">
+{{!--         {{#with details.profileImage.profileUrl as |imageUrl|}} 
+          <img {{action 'openFilepicker'}} src="{{imageUrl}}" alt="" class="avatar"/>
+        {{else}} --}}
+          <img {{!-- {{action 'openFilepicker'}}  --}}src="/assets/images/140x140.png" alt="" class="avatar"/>
+{{!--         {{/with}}      --}}    
+      </div>
+      <br>
+      {{#paper-switch checked=details.online}}{{if details.online 'ONLINE' 'HIDDEN'}}{{/paper-switch}}
+      <br>
+      <br>
+      {{#if details.online}}
+        People can see that you are online and chat with you.
+      {{else}}
+        You are hidden. No one can see that you are online.
+      {{/if}}
+    </div>     
+    <div class="right-three-quarters">
+      {{#with details as |details|}}
+        <div class="doc-content">
+          <div layout="" layout-sm="column">
+              {{paper-input flex=45 label='First Name' value=details.firstName}}
+              {{paper-input flex=45 label='Last Name' value=details.lastName}}
+          </div>
+          <div layout="" layout-sm="column">
+              {{paper-input flex=45 label='User Name' value=details.username}}
+              {{paper-input flex=45 label='Email' type="email" value=details.email}}
+          </div>
+          <div layout="" layout-sm="column">
+              {{paper-input flex=45 label='Telephone' value=details.phone}}
+              {{paper-input flex=45 label='Website' value=details.website}}
+          </div>
+          <div layout="" layout-sm="column">
+              {{paper-input flex=45 label='Gender' value=details.gender}}
+              <md-input-container tabindex="-1" flex="45" class="ember-view md-default-theme md-input-has-value">    
+                <label for="dob">Date of Birth</label>
+                {{pikaday-input yearRange="1980,currentYear" id="dob" value=details.dob format="MM/DD/YYYY"  class="md-input ember-view ember-text-field"}}
+              </md-input-container>       
+          </div>
+          <div layout="" layout-sm="column">
+              {{paper-input flex=45 label='City' value=details.location}}
+              {{#with supportedCountries as |supportedCountries|}}
+              {{#paper-select flex=45 placeholder="Locale" model=details.locale item-label-callback=selectLabel}}
+                {{#each supportedCountries as |country|}}
+                  {{#paper-option value=country}}
+                    <img src={{country.flagUrl}} class="md-avatar" style="height:32px;">
+                    {{country.countryName}} ({{country.localeName}})
+                  {{/paper-option}}
+                {{/each}}   
+              {{/paper-select}} 
+              {{/with}}
+          </div>
+        </div>
+      {{/with}}
+    </div>   
+  </p>
+{{/paper-content}}

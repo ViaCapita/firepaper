@@ -1,0 +1,557 @@
+/**
+ * Name: layout.css
+ * Version: 1.0.0
+ *	
+ *	-
+ *
+ *	T.O.C
+ *	
+ *	#General Layout 
+ *		#Header
+ *		#Content
+ *		#Footer
+ *	#Page Styles
+ *	#Responsive
+ *		#Smaller then 1024px width	
+ *		#Tablet (Portrait)
+ *		#Mobile (Portrait and Landscape )
+ *		#Mobile ( Landscape )
+ */
+
+/* ==========================================================================
+   #General Layout 
+   ========================================================================== */
+
+	#wrap {
+		max-width: 1100px;
+		margin: 100px auto;
+		background-color: #fff;
+		position: relative;
+		z-index: 90;	
+	}
+	
+/* #Header
+   ========================================================================== */	
+   	
+	#header {}
+
+/* #Content
+   ========================================================================== */
+   		
+	#content { 
+		min-height: 300px; 
+	}
+		
+		
+/* #Footer
+   ========================================================================== */		
+		
+	#footer { padding-top: 60px; }  
+		
+		
+/* ==========================================================================
+   #Page Styles 
+   ========================================================================== */
+
+	/* CV Section */
+	
+	.cv-section {
+		padding: 65px 0;
+		border-top: 1px solid #dadada; 
+	}
+	
+	#header .cv-section:first-child { border-top: 10px solid #de4e43; }
+	
+	/* CV Section Title */
+
+	.cv-section-title img {
+		float: left;
+		display: block;
+		margin-right: 20px;
+		padding: 5px;
+		border: 1px solid #dadada;
+	}
+	
+	.cv-section-title h1 { padding-top: 50px; }
+	
+	.cv-section-title h1 small { 
+		font-size: 24px;
+		line-height: 48px;
+		text-transform: uppercase;
+		display: block;
+	}
+	
+	.cv-section-title h2 {
+		margin-bottom: 0;
+		color: #b1b1b1; 
+	}
+	
+	/* CV Item */
+	
+	.cv-item {
+		padding-bottom: 40px;
+		border-bottom: 1px solid #dadada;
+		margin-bottom: 40px;
+	}
+	
+	.cv-item:last-child {
+		padding-bottom: 0;
+		border-bottom: none; 
+		margin-bottom: 0;
+	}
+	
+	.cv-item h3 { margin-bottom: 0; }
+	
+	.social-media { margin-bottom: 20px; }
+	
+	.period {
+		float: right;
+		padding: 12px 20px;
+		font-size: 90%;
+		background-color: #b1b1b1;
+		color: #fff;
+		-webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+		text-transform: uppercase;		
+	}
+	
+	.cv-item:hover .period { background-color: #de4e43; }
+		
+	.skill-tag {
+		// float: right;
+		padding: 12px 20px;
+		font-size: 90%;
+		background-color: #b1b1b1;
+		color: #fff;
+		-webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+		text-transform: uppercase;		
+	}
+	
+	.skill-tag:hover  { background-color: #de4e43; }
+	
+	/* Copyright */
+	
+	.copyright {
+		padding: 5px 0;
+		margin-bottom: 0;
+		background-color: #b1b1b1;
+		color: #fff;
+		text-align: center;
+		font-size: 12px;
+		text-transform: uppercase;
+	}
+	
+	/* Isotope */
+	
+	.portfolio-items {
+		margin-bottom: 0;
+		list-style: none;
+	}
+	
+	.portfolio-items li {
+		float: left;
+		width: 25%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+				box-sizing: border-box;
+		padding: 10px;
+	}
+	
+	.portfolio-items li img { 
+		display: block;
+		width: 100%;
+	}
+	
+	.portfolio-items li a {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin-top: -24px;
+		color: #de4e43;
+		text-align: center;
+		opacity: 0;
+		-webkit-transition: all 0.3s;
+			 -o-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.portfolio-items li a i { font-size: 48px; }
+	
+	.portfolio-items li:hover a {
+		top: 50%;
+		opacity: 1; 
+	}
+
+	/* Portfolio filter */
+	
+	.portfolio-filter ul {
+		margin-bottom: 0;
+		list-style: none;
+	}
+	
+	.portfolio-filter ul li { 
+		display: inline-block;
+		margin-right: 5px;
+	}
+	
+	.portfolio-filter ul li:last-child { margin-right: 0; }
+	
+	.portfolio-filter ul li a {
+		display: block;
+		padding: 7px 10px;
+		color: #444; 
+		text-decoration: none;
+		-webkit-transition: all 0.3s;
+			 -o-transition: all 0.3s;
+				transition: all 0.3s;
+	}
+	
+	.portfolio-filter ul li a:hover,
+	.portfolio-filter ul li a.active { 
+		background-color: #b1b1b1;
+		color: #fff;
+	}
+	
+	/* CV Contact */
+	
+	.cv-contact {
+		position: fixed;
+		top: 210px;
+		width: 240px;
+		padding: 40px;
+		-webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);   
+				box-shadow: 0 0 6px rgba(0, 0, 0, 0.2); 
+		background-color: #fff;
+		z-index:100;
+	}
+	
+	.cv-contact-toggle {
+		position: absolute;
+		top: 0;
+		right: -50px;
+		width: 50px;
+		height: 50px;
+		background-color: #de4e43;
+		text-align: center;
+		cursor: pointer;
+		border-radius: 0 2px 2px 0;
+		-webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+	}
+	
+	.cv-contact-toggle i {
+		color: #fff;
+		font-size: 24px;
+		line-height: 50px;
+	}
+	
+	.cv-contact-toggle:hover { background-color: #d78c02; }
+	
+	/* Contact Form */
+	
+	#contact-form {  overflow: hidden; }
+	
+	#contact-form fieldset { margin: 0; }
+	
+	label.validation-error { color: #b55454; }
+	
+	input.validation-error,
+	textarea.validation-error,
+	select.validation-error { border: 1px solid #a1a1a1; }
+	
+	#contact-form #formstatus {}
+		
+	#contact-form textarea {  }
+	
+	#contact-form input[type="submit"] {
+		border: none;
+		background-color: #252525;
+		color: #fff;
+		text-transform: uppercase;
+		-webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+	}
+	
+	#contact-form input[type="submit"]:hover { background-color: #000; }
+	
+	/* Print & Download PDF Buttons */
+	
+	#print,
+	#pdf {
+		position: fixed;
+		right: 30px;
+		display: block;
+		width: 50px;
+		height: 50px;
+		background-color: #de4e43;
+		text-align: center;
+		text-decoration: none;
+		-webkit-border-radius: 2px;
+		        border-radius: 2px;
+		-webkit-transition: background-color 0.3s;
+			 -o-transition: background-color 0.3s;
+				transition: background-color 0.3s;
+		z-index: 80;		
+	}
+	
+	 #print i,
+	 #pdf i {
+		color: #fff;
+		font-size: 24px;
+		line-height: 50px;
+	}
+	
+	#print { bottom: 30px; }
+	#pdf { bottom: 85px; }
+	
+	#print:hover,
+	#pdf:hover { background-color: #d78c02; }
+	
+   
+/* ==========================================================================
+   #Responsive
+   ========================================================================== */
+   
+/* #Smaller then 1400px width
+   ========================================================================== */
+	
+	@media (max-width: 1399px) {
+
+		#wrap { 
+			margin: 10px auto; 
+			max-width: 1060px;
+		}
+		
+		#header {}
+		
+		#content {}
+		
+		#footer { padding-top: 0; }
+		
+	}
+
+	@media (max-width: 1024px) {
+		
+		#wrap { margin: 0; }
+		
+	}
+	
+/* #Tablet (Portrait)
+   ========================================================================== */
+
+	@media (min-width: 768px) and (max-width: 979px) {
+		
+		#wrap {}
+		
+		#header {}	
+		
+		#content {}
+		
+		#footer {}
+		
+		a.social-icon { margin-right: 5px;}
+
+		.cv-contact { top: 275px; }
+		
+	}
+	
+/* #Mobile (Portrait and Landscape )
+   ========================================================================== */
+	
+	@media (max-width: 767px) {
+	
+		body { 
+			background: none; 
+			background-color: #fff; 
+		}
+		
+		#wrap {}
+		
+		#header {}
+		
+		#header .cv-section-title { text-align: center; }	
+		
+		#content {}
+		
+		#footer{ padding-top: 0; }	
+
+		.row { padding: 0 40px; }
+		
+		.row .row { 
+			width: auto; 
+			padding: 0 20px; 
+			margin: 0; 
+		}
+		
+		p.last, 
+		h1.last, 
+		h2.last, 
+		h3.last, 
+		h4.last, 
+		h5.last, 
+		address.last, 
+		ul.last, 
+		ol.last { margin-bottom: 20px; }
+		
+		.text-right { text-align: left; }
+		
+		.cv-section-title { margin-bottom: 40px; }
+		
+		.cv-section { padding: 65px 40px; }  
+		
+		.cv-section-title img { 
+			float: none;
+			margin: 0 auto;
+		}
+		
+		.period { float: none; }
+		
+		/* Portfolio Items */
+		
+		.portfolio-items li {
+			float: none;
+			width: 100%;
+		}
+		
+		.portfolio-filter ul li { 
+			display: block;
+			margin-right: 0;
+			margin-bottom: 10px;
+		}
+		
+		.portfolio-filter ul li:last-child { margin-bottom: 0; }
+
+		a.social-icon { margin-right: 5px;}
+		
+		.cv-contact {
+			position: static;
+			top: auto;
+			width: auto;
+			padding: 0;
+			padding-bottom: 40px;
+			-webkit-box-shadow: none;   
+					box-shadow: none; 
+			background-color: #fff;
+			z-index: 100;
+		}
+		
+		.cv-contact-toggle { display: none; }
+		
+	}
+	
+/* #Mobile ( Landscape )
+  ========================================================================== */
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+		
+		.row { padding: 0 40px; }
+		
+		.cv-section { padding: 65px 40px; } 
+		
+		/* Portfolio Items */
+		
+		.portfolio-items li {
+			float: left;
+			width: 50%;
+		}
+		
+	}	
+
+
+
+.sortable-item {
+  padding: 4px;
+  transition: all .125s;
+  list-style-type: none;
+}
+
+.sortable-item.is-dragging {
+  transition-duration: 0s;
+  z-index: 10;
+}
+
+// .demo .sortable-item .handle {
+//   padding: 0 .5em;
+//   cursor: move;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+
+// .vertical-demo .sortable-item {
+//   display: block;
+//   position: relative;
+//   background: pink;
+//   margin: 4px 0;
+// }
+
+.sortable-item.is-dragging {
+  background: red;
+}
+
+.sortable-item.is-dropping {
+  background: #f66;
+  z-index: 10;
+}
+
+// .vertical-demo .sortable-item .handle {
+//   display: block;
+//   position: absolute;
+//   top: 0; right: 0; bottom: 0;
+//   background: rgba(127, 0, 0, .5);
+//   color: pink;
+// }
+// .horizontal-demo .sortable-item {
+//   display: inline-block;
+//   position: relative;
+//   cursor: move;
+//   background-color: hsl(197, 100%, 45%);
+//   margin: 0 4px;
+// }
+
+// .horizontal-demo .sortable-item.is-dragging {
+//   background: hsl(197, 100%, 35%);
+// }
+// .horizontal-demo .sortable-item.is-dropping {
+//   background: hsl(197, 100%, 40%);
+//   z-index: 10;
+// }
+
+
+// .table-demo table {
+//   position: relative;
+//   border-collapse: separate;
+//   border-spacing: 2px;
+// }
+
+// .table-demo td,
+// .table-demo th {
+//   border: 1px solid #ddd;
+//   text-align: left;
+//   padding: 0;
+//   background: white;
+// }
+// .table-demo td:last-child,
+// .table-demo th:last-child {
+//   padding: 0 1em 0 4px;
+// }
+
+// .table-demo .sortable-item .handle {
+//   display: block;
+//   background: transparent;
+//   color: black;
+// }
+
+
+
+
+
+	

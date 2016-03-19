@@ -1,0 +1,95 @@
+/**
+ * This theme is an example to show how you can create your own.
+ */
+.pika-single.material-lite {
+    color: #202020;
+    background: #fafafa;
+    border: none;
+}
+
+.pika-lendar {
+  margin-bottom: 0;
+}
+
+.material-lite {
+  .pika-title {
+    background-color: unquote("rgb(#{$color-accent})");
+    margin-left: -8px;
+    margin-right: -8px;
+    height: 40px;
+  }
+
+  .pika-label {
+    color: #fff;
+    background-color: unquote("rgb(#{$color-accent})");
+    line-height: 30px;
+  }
+
+  .pika-prev,
+  .pika-next {
+    height: 40px;
+  }
+
+  .pika-prev {
+    margin-left: 8px;
+  }
+
+  .pika-next {
+    margin-right: 8px;
+  }
+
+  .pika-prev,
+  .is-rtl .pika-next {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAQAAACGG/bgAAAAQ0lEQVR4Ae3KIQ4AIBTD0N0/IeHGI3UIRA3ut/Zl+ltXc5++htVAmIAwAWECwgSEKbgthEoIlRAqIVRCqINQB9nDgQd7ktwFo6UpWQAAAABJRU5ErkJggg==');
+  }
+
+  .pika-next,
+  .is-rtl .pika-prev {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAeCAQAAACGG/bgAAAAP0lEQVQ4y+3TMQoAMAgEwfwfAvvjTZ1uGzuvHhBPPGczEG+FRqqRaqQaqUaqkX6QBmmjacvQ6qEVTjsh+xizebvlaWptGXZAAAAAAElFTkSuQmCC');
+  }
+
+  .pika-table th {
+    color: #999;
+  }
+
+  .pika-table {
+    td, th {
+      padding-bottom: 10px;
+    }
+  }
+
+  .pika-button {
+    color: #202020;
+    background: #fafafa;
+    border-radius: 20px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    @include box-shadow(none);
+
+    &:hover {
+      color: #fff !important;
+      background: unquote("rgb(#{$color-accent})") !important;
+    }
+  }
+
+  .pika-week {
+    color: #999;
+  }
+
+  .is-today .pika-button {
+    color: #000;
+    font-weight: bold;
+  }
+
+  .is-selected .pika-button {
+    color: #fff;
+    background: unquote("rgb(#{$color-accent})");
+  }
+
+  .is-disabled .pika-button {
+    color: #999;
+    opacity: .3;
+  }
+}
+

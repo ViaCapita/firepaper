@@ -1,0 +1,36 @@
+{{#paper-toolbar class='cv-dark-red-sidebar'}}
+  <div class="md-toolbar-tools">
+    <div class="left-toolbar">     
+      <span class="md-breadcrumb-page">
+          My Account
+      </span>
+    </div>
+    <div class="right-toolbar">
+      <i class="mdi mdi-help"></i> 
+    </div>
+  </div>
+{{/paper-toolbar}} 
+<div id='sidebar-explode'>
+  {{#paper-content class="md-top-padding cv-sidebar"}}   
+        {{#paper-list}}
+      {{#paper-item class="cv-dark-red-sidebar"}}
+       <i class="mdi mdi-account-box"></i>&nbsp;&nbsp;Account Details
+      {{/paper-item}}
+      {{#paper-item class="cvr-white"}}
+        <small>Edit basic account details like your name, location and email address.</small>
+      {{/paper-item}}<br>
+      {{#paper-item class="cv-dark-red-sidebar"}}
+       <i class="mdi mdi-settings"></i>&nbsp;&nbsp;Acount Settings
+      {{/paper-item}}
+      {{#paper-item class="cvr-white"}}
+        <small>Edit when you get notifications or change your password.</small>
+      {{/paper-item}}<br>
+      {{#paper-item class="cv-dark-red-sidebar"}}
+       <i class="mdi mdi-security"></i>&nbsp;&nbsp;Account Permissions
+      {{/paper-item}}
+      {{#paper-item class="cvr-white"}}
+        <small>Edit your Account Permissions.</small><br>
+      {{/paper-item}}<br>
+    {{/paper-list}}
+  {{/paper-content}} 
+</div>

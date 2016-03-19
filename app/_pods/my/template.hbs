@@ -1,0 +1,114 @@
+{{#paper-nav-container class="site-nav-container"}}
+  {{#paper-sidenav class="md-sidenav-left md-whiteframe-z2 site-sidenav" locked-open="gt-md"}}
+    {{#paper-toolbar class="site-content-toolbar"}}
+      <div class="md-toolbar-tools">
+        <div class="logo" style="padding-left: 30px;">
+          <img src="/firepaper-logo.png"/> 
+        </div>
+      </div>
+    {{/paper-toolbar}}
+    {{#paper-content class="cv-sidebar"}}
+      {{outlet "sidebar"}}
+      <div class="mega-footer cvresume-footer">
+        <div class="mdl-mega-footer--middle-section">
+          &nbsp;
+        </div>
+        <div class="mdl-mega-footer--bottom-section button-footer" style="padding-bottom: 20px;">
+        </div>
+      </div>
+    {{/paper-content}}
+  {{/paper-sidenav}}
+  <div layout="column" tabindex="-1" role="main" flex>
+    {{#paper-toolbar}}
+      <div class="md-toolbar-tools">
+        <div class="left-toolbar">
+          {{#paper-sidenav-toggle as |toggle|}}
+            {{#paper-button target=toggle action="toggleMenu" icon-button=true}}
+              {{paper-icon icon="menu"}}
+            {{/paper-button}}
+          {{/paper-sidenav-toggle}}
+          <div class="logo" hide-gt-md='true' style="padding-left: 10px; padding-right: 20px;">
+            <img src="/firepaper-logo.png"/>  
+          </div>
+          <span class="md-breadcrumb-page">
+            {{displayTitle}}
+          </span>       
+        </div>
+        <div class="right-toolbar">
+          {{#paper-menu position="target-right target" as |menu|}}
+            {{#paper-button target=menu action="toggleMenu" icon-button=true}}
+                {{paper-icon class="md-menu-origin" icon="home"}}
+            {{/paper-button}}
+          {{else}}               
+            {{#paper-menu-item class="cvr-menu-header-outer"}}
+              <span class="cvr-menu-header">My Account</span>
+            {{/paper-menu-item}}
+            {{paper-divider}}             
+            {{#paper-menu-item action="goTo" param='account.details'}}
+              {{paper-icon icon="account-circle" class="md-menu-align-target"}}
+              <span>{{t 'account.one'}}</span>
+            {{/paper-menu-item}}
+            {{#paper-menu-item action="signOut"}}
+              {{paper-icon icon="exit-to-app" class="md-menu-align-target"}}
+              <span>{{t 'site.signout'}}</span>
+            {{/paper-menu-item}}
+          {{/paper-menu}}
+          
+          {{#if locale}}
+            <span class="hide-mobile">
+              {{#paper-menu position="target-right target" as |menu|}}
+                {{#paper-button  icon-button=true target=menu action="toggleMenu"}}  
+                <div class="md-menu-origin">
+                  <img src={{locale.flagUrl}} style="margin-top:12px; height:24px; float:right; align-items: baseline;">&nbsp;
+                </div>
+                {{/paper-button}} 
+              {{else}}
+                {{#each supportedCountries as |country|}}
+                  {{#paper-menu-item action="changeLocale" param=country}}
+                    <img src={{country.flagUrl}} style="height:32px; padding-top:10px;">
+                    <span>
+                      &nbsp;&nbsp;{{country.name}} 
+                      ({{country.localeName}})
+                    </span>
+                  {{/paper-menu-item}}
+                {{/each}}
+              {{/paper-menu}}
+            </span>
+          {{/if}}  
+        </div>    
+      </div>       
+    {{/paper-toolbar}}
+    {{#paper-content}}
+      {{liquid-outlet}}
+
+      <div class="mega-footer cvresume-footer">
+        <div class="mdl-mega-footer--middle-section">
+          <span class="mdl-layout-title">
+            <div class="left-quarter">
+              <img src="/firepaper-logo.png" style="padding-top: 10px; padding-left: 30px;">
+            </div>
+            <div class="right-three-quarters">
+              <h3 style="color: #ffffff; margin-top: 20px; text-align:right; padding-right:10px;">Follow us on Social Media</h3> 
+              <div class="social-login-buttons" style="padding-right: 10px; text-align:right;">
+                <a href="#" class="social-login-button facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="social-login-button twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="social-login-button google">
+                  <i class="fa fa-google"></i>
+                </a>
+                <a href="#" class="social-login-button github">
+                  <i class="fa fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </span>
+        </div>
+        <div class="mdl-mega-footer--bottom-section button-footer" style="padding-bottom: 20px;">
+        </div>
+      </div>
+    {{/paper-content}} 
+  </div>
+{{/paper-nav-container}}

@@ -1,0 +1,55 @@
+
+.md-chip {
+  display: inline-block;
+  background-color: rgb(222, 78, 67);
+  border-radius: 42px;
+  padding: 0;
+  height: 42px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  -webkit-transition: .2s ease-out;
+          transition: .2s ease-out;
+}
+
+.md-chip:hover {
+  box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+
+.md-chip-img {
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  overflow: hidden;
+  float: left;
+  background-color: #bb4038;
+  box-shadow: 2px 0px rgba(0,0,0,.3);
+}
+
+.md-chip-img .md-chip-span {
+  display: block;
+  height: 42px;    
+  font-size: 36px;
+  padding-left: 4px;
+  color: white;
+}
+
+.md-chip-img img {
+  -webkit-transform: translate(-50%);
+  margin-left: 21px;
+  height: 42px;
+}
+
+.md-chip-text {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 17px;
+  height: 42px;
+  float: left;
+  padding: 12px 18px 12px 10px;
+  color: rgba(255, 255, 255, .87);
+}
+
+/* For the sake of this demo */
+// .md-chip {
+//   margin: 0 20px 20px 0px;
+// }
