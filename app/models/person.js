@@ -3,7 +3,7 @@ import DS from 'ember-data';
 import computed from 'ember-new-computed';
 
 const get = Ember.get;
-const inject = Ember.inject;
+// const inject = Ember.inject;
 
 export default DS.Model.extend({
 
@@ -58,11 +58,10 @@ export default DS.Model.extend({
 
 
   setFromSession(session) {
-    const self = this;
     const profile = get(session, 'currentUser.cachedUserProfile');
     this.set('uid', get(session, 'uid'));
     this.set('provider', get(session, 'provider'));
-    this.set('locale', 'en');
+    // this.set('locale', 'en');
     
     // Very Important
     this.set('firstName', get(profile, 'given_name'));
@@ -70,7 +69,7 @@ export default DS.Model.extend({
 
     this.set('gender', get(profile, 'gender'));
     // ~Important but Network Specific
-    this.set('googleAvatar', get(profile, 'picture'));
+    // this.set('googleAvatar', get(profile, 'picture'));
   }
 });
 
